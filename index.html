@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Learn Vue Js</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/materialize.css">
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <nav>
+   <div class="nav-wrapper">
+     <div class="container">
+     <div class="row">
+       <div class="col l12">
+         <a href="/" class="brand-logo">Home Belajar</a>
+         <ul id="nav-mobile" class="right hide-on-med-and-down">
+           <li><a href="#!/tambahinfo">Tambah Data</a></li>
+           <li><a href="#!/kontak">Kontak</a></li>
+         </ul>
+       </div>
+     </div>
+   </div>
+   </div>
+ </nav> -->
+  <div class="container">
+    <div class="row">
+      <div id="app">
+       <div class="col l12" >
+          <!-- cara menampilkan data dalam bentuk raw(ada element htmlnya) -->
+          <span v-html="raw"></span>
+      
+          <ul>
+            <!-- v-for disni mirip dengan foreach di laravel, member variabel di sini dan members variabel di script -->
+              <li v-for="(keys,member) in members">
+                <!-- menampilkan data members -->
+                {{ keys }} ** {{ member}} berumur 
+              </li>
+              <!-- bisa juga untuk loop angka -->
+              <li v-for="n in 5">{{n}}</li>
+            </ul>
+      </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/materialize.min.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

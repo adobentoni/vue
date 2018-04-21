@@ -1,0 +1,7 @@
+<div>
+  <h3>Data yang baru</h3>
+  <input type="text" ng-model="cari">
+  <ul class="collection">
+      <li ng-repeat="dn in data | filter:cari | orderBy: 'kota'" class="collection-item"> {{ dn.id }}. {{dn.nama}} , Kota: {{dn.kota}} </li>
+  </ul>
+</div>
